@@ -9,6 +9,7 @@ Globalized and shared testdata has a lot advantages for everyone:
   - writing tests will be faster
   - writing the test and implementation gets the focus
   - you have lesser excuses to not write tests
+  - tests and data will be decoupled cleanly
 
 Testdata writing can be fun! Imagine a world of testdata, where test people live 
 (did you heard of [Max Mustermann](http://en.wikipedia.org/wiki/List_of_placeholder_names_by_language) these days?)
