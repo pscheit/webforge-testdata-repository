@@ -1,4 +1,4 @@
-Testdata repository
+a repository for global testdata
 ============================
 
 Writing testdata can really be a tricky task. This project tries to gather testdata from everywhere for a lot of common tasks in developer life. It should not be language dependent, so that testdata can be contributed from everyone who writes tests.
