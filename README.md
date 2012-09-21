@@ -10,8 +10,10 @@ Globalized and shared testdata has a lot advantages for everyone:
   - writing the test and implementation gets the focus
   - you have lesser excuses to not write tests
 
-Testdata writing can be fun! Imagine a world of testdata, where test people live (did you heard of Max Mustermann these days?)
-http://en.wikipedia.org/wiki/List_of_placeholder_names_by_language
+Testdata writing can be fun! Imagine a world of testdata, where test people live 
+(did you heard of [Max Mustermann](http://en.wikipedia.org/wiki/List_of_placeholder_names_by_language) these days?)
+Testdata cars are driving, credit cards have numbers...
+
 
 roadmap
 ============================
@@ -22,5 +24,4 @@ roadmap
 
 resources
 ============================
-http://isemail.info
-http://isemail.info/_system/is_email/test/?all
+[http://isemail.info - email validation with tests](http://isemail.info/_system/is_email/test/?all)
