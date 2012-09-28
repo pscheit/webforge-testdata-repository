@@ -76,23 +76,25 @@ STRING;
   }
   
   public function toHTMLList() {
+    // the titles are enclosed with the <a> tag to circumstance that the titles for nodes with children will include unecessary whitespace
     return <<<'HTML'
 <ul>
-  <li>Food
+  <li><a>Food</a>
     <ul>
-      <li>Vegetables</li>
-      <li>Fruits
+      <li><a>Vegetables</a></li>
+      <li><a>Fruits</a>
         <ul>
-          <li>Citrons</li>
-          <li>Oranges</li>
+          <li><a>Citrons</a></li>
+          <li><a>Oranges</a></li>
         </ul>
       </li>
-      <li>Milk</li>
-      <li>Meat</li>
+      <li><a>Milk</a></li>
+      <li><a>Meat</a></li>
     </ul>
   </li>
 </ul>
 HTML;
+  }
   }
 }
 ?>
