@@ -95,6 +95,5 @@ STRING;
 </ul>
 HTML;
   }
-  }
 }
 ?>
