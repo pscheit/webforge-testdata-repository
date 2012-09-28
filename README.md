@@ -1,5 +1,6 @@
 a repository for global testdata
 ============================
+[![Build Status](https://secure.travis-ci.org/pscheit/webforge-testdata-repository.png)](http://travis-ci.org/pscheit/webforge-testdata-repository)
 
 Writing testdata can really be a tricky task. This project tries to gather testdata from everywhere for a lot of common tasks in developer life. It should not be language dependent, so that testdata can be contributed from everyone who writes tests.
 Globalized and shared testdata has a lot advantages for everyone:
