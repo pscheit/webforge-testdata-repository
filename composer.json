@@ -1,5 +1,5 @@
 {
-  "name": "webforge-testdata-repository",
+  "name": "webforge/testdata-repository",
   "type": "library",
   "description": "A repository for data that you can use to fill your unit tests.",
     "keywords": ["testdata", "data", "unit test"],
