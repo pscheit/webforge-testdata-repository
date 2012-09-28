@@ -15,6 +15,7 @@ Testdata writing can be fun! Imagine a world of testdata, where test people live
 (did you heard of [Max Mustermann](http://en.wikipedia.org/wiki/List_of_placeholder_names_by_language) these days?)
 Testdata cars are driving, credit cards have numbers...
 
+I really like the "hands on code thing" and started working out a small example for NestedSets.
 
 roadmap
 ============================
@@ -26,3 +27,4 @@ roadmap
 resources
 ============================
 [http://isemail.info - email validation with tests](http://isemail.info/_system/is_email/test/?all)
+
