@@ -61,6 +61,14 @@ class NestedSetExampleTest extends \PHPUnit_Framework_TestCase {
     $this->assertFalse(mb_strpos($string, "\t"), 'dont use \t for indenting. Use 2 whitespaces for 1 level of depth');
     $this->assertStringEndsWith("\n", $string);
   }
+
+  /**
+   * @dataProvider provideExamples
+   */
+  public function testHTMLListIsValidHTML(NestedSetExample $example) {
+    // phpunit can do nicer output for us
+    $this->assertXmlStringEqualsXmlString($example->toHTMLList(), $example->toHTMLList());
+  }
   
   public static function provideExamples() {
     return Array(
