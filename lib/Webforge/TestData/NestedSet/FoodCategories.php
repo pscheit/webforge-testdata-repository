@@ -64,13 +64,13 @@ class FoodCategories extends NestedSetExample {
         'title' => 'Beef',
         'lft' => 13,
         'rgt' => 14,
-        'depth' => 1,
+        'depth' => 2,
       ),
       array(
         'title' => 'Ham',
         'lft' => 15,
         'rgt' => 16,
-        'depth' => 1,
+        'depth' => 2,
       )
     );
   }
