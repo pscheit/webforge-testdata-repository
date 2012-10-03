@@ -21,7 +21,7 @@ class FoodCategories extends NestedSetExample {
       array(
         'title' => 'Food',
         'lft' => 1,
-        'rgt' => 17,
+        'rgt' => 18,
         'depth' => 0,
       ),
       array(
