@@ -61,6 +61,46 @@ class FoodCategories extends NestedSetExample {
     );
   }
   
+  public function toParentPointerArray() {
+    return Array(
+      array(
+        'title' => 'Food',
+        'parent'=> NULL,
+        'depth' => 0
+      ),
+      array(
+        'title' => 'Vegetables',
+        'parent' => 'Food',
+        'depth' => 1
+      ),
+      array(
+        'title' => 'Fruits',
+        'parent' => 'Food',
+        'depth' => 1,
+      ),
+      array(
+        'title' => 'Citrons',
+        'parent' => 'Fruits',
+        'depth' => 2,
+      ),
+      array(
+        'title' => 'Oranges',
+        'parent' => 'Fruits',
+        'depth' => 2,
+      ),
+      array(
+        'title' => 'Milk',
+        'parent' => 'Food',
+        'depth' => 1,
+      ),
+      array(
+        'title' => 'Meat',
+        'parent' => 'Food',
+        'depth' => 1,
+      )
+    );
+  }
+  
   public function toString() {
     return <<<'STRING'
 Food

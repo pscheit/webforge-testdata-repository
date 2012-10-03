@@ -28,6 +28,24 @@ class NestedSetExampleTest extends \PHPUnit_Framework_TestCase {
   /**
    * @dataProvider provideExamples
    */
+  public function testParentPointerArrayHasParentAndParentIsValidTitle(NestedSetExample $example) {
+    $titles = array();
+    foreach ($example->toParentPointerArray() as $key=>$category) {
+      $this->assertArrayHasKey('parent', $category, $category['title'].' has not a parent key. if not set it must be NULL');
+      $this->assertNotEmpty($category['title'], 'Title for Array Key '.$key.' is empty');
+      $titles[$category['title']] = TRUE;
+    }
+    
+    foreach ($example->toParentPointerArray() as $category) {
+      if ($category['parent'] === NULL) continue;
+      
+      $this->assertArrayHasKey($category['parent'], $titles, 'The parent key for: '.print_r($category,true).' is not valid. The parent-title was not found');
+    }
+  }
+
+  /**
+   * @dataProvider provideExamples
+   */
   public function testDepthIsNonNegative(NestedSetExample $example) {
     foreach ($example->toArray() as $category) {
       $this->assertGreaterThanOrEqual(0, $category['depth'], $category['title'].' has an invalid depth');
