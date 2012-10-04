@@ -20,6 +20,21 @@ abstract class NestedSetExample {
    */
   abstract public function toArray();
   
+  
+  /**
+   * Returns a Tree as an nested, Array of Nodes
+   *
+   * As arrays are not reference save, the reference for a node is made through its title
+   * every node has to have a "parent" key (which can be NULL for root nodes)
+   * 
+   * its optional to have the parent of the parent in the node (depth 1 is sufficient)
+   * lft and rgt values are optional, but should better left out
+   * depth is optional, but is good for orientation
+   *
+   * so: for every node there is required: title, parent
+   */
+  abstract public function toParentPointerArray();
+  
   /**
    * Returns the Tree indented with only its titles
    *
