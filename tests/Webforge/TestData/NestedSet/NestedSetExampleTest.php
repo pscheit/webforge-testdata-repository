@@ -72,7 +72,9 @@ class NestedSetExampleTest extends \PHPUnit_Framework_TestCase {
   
   public static function provideExamples() {
     return Array(
-      array(new FoodCategories())
+      array(new FoodCategories()),
+      array(new Consumables())
+
     );
   }
 }
