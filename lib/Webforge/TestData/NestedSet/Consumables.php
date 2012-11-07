@@ -90,9 +90,9 @@ class Consumables extends NestedSetExample {
 Food
   Vegetables
   Fruits
-  Electronics
-    Mobiles
-    DVD-Players
+Electronics
+  Mobiles
+  DVD-Players
 
 STRING;
     // this looks funny with the empty line, but otherwise php would cut directly after the t from Meat
