@@ -2,7 +2,7 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class ImplicitPublicMethodInClass extends CodeIndentation {
+class PropertyInClassCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
@@ -13,10 +13,7 @@ namespace Vendor\Package;
 
 class ClassName
 {
-    public function foo($arg1, &$arg2, $arg3 = array())
-    {
-        echo "method body";
-    }
+    public $foo = null;
 }
 
 PHP;
@@ -31,10 +28,7 @@ namespace Vendor\Package;
 
 class ClassName
 {
-    public function foo($arg1, &$arg2, $arg3 = array())
-    {
-        echo "method body";
-    }
+    public $foo = null;
 }
 
 PHP;

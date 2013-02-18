@@ -2,7 +2,7 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class SwitchCase extends CodeIndentation {
+class SwitchCaseCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2

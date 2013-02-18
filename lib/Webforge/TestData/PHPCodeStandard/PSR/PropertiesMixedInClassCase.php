@@ -2,7 +2,7 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class FinalStaticMethodInClass extends CodeIndentation {
+class PropertiesMixedInClassCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
@@ -13,10 +13,12 @@ namespace Vendor\Package;
 
 class ClassName
 {
-    final public static function bar()
-    {
-        echo "method body";
-    }
+    const VERSION = '1.0';
+    const DATE_APPROVED = '2012-06-01';
+    
+    public static $bar;
+    
+    public $foo = null;
 }
 
 PHP;
@@ -31,10 +33,12 @@ namespace Vendor\Package;
 
 class ClassName
 {
-    final public static function bar()
-    {
-        echo "method body";
-    }
+    const VERSION = '1.0';
+    const DATE_APPROVED = '2012-06-01';
+    
+    public static $bar;
+    
+    public $foo = null;
 }
 
 PHP;

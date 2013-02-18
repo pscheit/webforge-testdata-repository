@@ -2,7 +2,7 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class TryCatch extends CodeIndentation {
+class TryCatchCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2

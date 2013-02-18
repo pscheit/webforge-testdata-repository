@@ -2,17 +2,16 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class DoWhile extends CodeIndentation {
+class ForeachCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
    */
   public function toPSR2() {
     return <<<'PHP'
-do {
-    echo "structure body";
-} while ($expr);
-
+foreach ($iterable as $key => $value) {
+    echo "foreach body";
+}
 PHP;
   }
 
@@ -21,10 +20,9 @@ PHP;
    */
   public function toString() {
     return <<<'PHP'
-do {
-    echo "structure body";
-} while ($expr);
-
+foreach ($iterable as $key => $value) {
+    echo "foreach body";
+}
 PHP;
   }
 }

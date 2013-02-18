@@ -2,7 +2,7 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class ProtectedMethodInClass extends CodeIndentation {
+class FinalStaticMethodInClassCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
@@ -13,7 +13,7 @@ namespace Vendor\Package;
 
 class ClassName
 {
-    protected function bar()
+    final public static function bar()
     {
         echo "method body";
     }
@@ -31,7 +31,7 @@ namespace Vendor\Package;
 
 class ClassName
 {
-    protected function bar()
+    final public static function bar()
     {
         echo "method body";
     }

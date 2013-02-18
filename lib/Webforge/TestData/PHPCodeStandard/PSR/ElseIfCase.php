@@ -2,16 +2,19 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class While extends CodeIndentation {
+class ElseIfCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
    */
   public function toPSR2() {
     return <<<'PHP'
-while ($expr) {
-    echo "structure body";
+if ($expr1) {
+    echo 'indentation is 4';
+} elseif ($expr2) {
+    echo 'indentation is 4';
 }
+
 PHP;
   }
 
@@ -20,9 +23,12 @@ PHP;
    */
   public function toString() {
     return <<<'PHP'
-while ($expr) {
-    echo "structure body";
+if ($expr1) {
+    echo 'indentation is 4';
+} elseif ($expr2) {
+    echo 'indentation is 4';
 }
+
 PHP;
   }
 }

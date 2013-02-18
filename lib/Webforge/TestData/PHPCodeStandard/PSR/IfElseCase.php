@@ -2,18 +2,17 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class PropertyInClass extends CodeIndentation {
+class IfElseCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
    */
   public function toPSR2() {
     return <<<'PHP'
-namespace Vendor\Package;
-
-class ClassName
-{
-    public $foo = null;
+if ($expr1) {
+    echo 'indentation is 4';
+} else {
+    echo 'indentation is 4';
 }
 
 PHP;
@@ -24,11 +23,10 @@ PHP;
    */
   public function toString() {
     return <<<'PHP'
-namespace Vendor\Package;
-
-class ClassName
-{
-    public $foo = null;
+if ($expr1) {
+    echo 'indentation is 4';
+} else {
+    echo 'indentation is 4';
 }
 
 PHP;

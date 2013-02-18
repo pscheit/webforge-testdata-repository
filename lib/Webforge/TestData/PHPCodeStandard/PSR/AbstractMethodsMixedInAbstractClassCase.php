@@ -2,7 +2,7 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class AbstractMethodsMixedInAbstractClass extends CodeIndentation {
+class AbstractMethodsMixedInAbstractClassCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2

@@ -2,7 +2,7 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class ConstInClass extends CodeIndentation {
+class StaticPropertyInClassCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
@@ -13,7 +13,7 @@ namespace Vendor\Package;
 
 class ClassName
 {
-    const SOMETHING = 7;
+    public static $bar;
 }
 
 PHP;
@@ -28,7 +28,7 @@ namespace Vendor\Package;
 
 class ClassName
 {
-    const SOMETHING = 7;
+    public static $bar;
 }
 
 PHP;

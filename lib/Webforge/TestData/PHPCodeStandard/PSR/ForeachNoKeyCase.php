@@ -2,16 +2,16 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class SimpleClosure extends CodeIndentation {
+class ForeachNoKeyCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
    */
   public function toPSR2() {
     return <<<'PHP'
-$closureWithArgs = function ($arg1, $arg2) {
-    echo "body";
-};
+foreach ($iterable as $value) {
+    echo "foreach body";
+}
 
 PHP;
   }
@@ -21,9 +21,9 @@ PHP;
    */
   public function toString() {
     return <<<'PHP'
-$closureWithArgs = function ($arg1, $arg2) {
-    echo "body";
-};
+foreach ($iterable as $value) {
+    echo "foreach body";
+}
 
 PHP;
   }

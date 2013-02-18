@@ -29,10 +29,10 @@ $createCommand('compile:code-standards',
     
     $convertName = function (File $caseFile) {
       return ucfirst(
-        Preg::replace_callback($caseFile->getName(), '/\-([a-z])/', function ($match) {
+        Preg::replace_callback($caseFile->getName(File::WITHOUT_EXTENSION), '/\-([a-z])/', function ($match) {
           return mb_strtoupper($match[1]);
         })
-      );
+      ).'Case.php';
     };
     
     $output->writeln('writing test cases in '.$resources);

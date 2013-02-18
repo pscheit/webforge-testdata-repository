@@ -2,19 +2,16 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class StaticPropertyInClass extends CodeIndentation {
+class SimpleClosureCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
    */
   public function toPSR2() {
     return <<<'PHP'
-namespace Vendor\Package;
-
-class ClassName
-{
-    public static $bar;
-}
+$closureWithArgs = function ($arg1, $arg2) {
+    echo "body";
+};
 
 PHP;
   }
@@ -24,12 +21,9 @@ PHP;
    */
   public function toString() {
     return <<<'PHP'
-namespace Vendor\Package;
-
-class ClassName
-{
-    public static $bar;
-}
+$closureWithArgs = function ($arg1, $arg2) {
+    echo "body";
+};
 
 PHP;
   }

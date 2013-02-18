@@ -2,19 +2,15 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class NamespaceUse extends CodeIndentation {
+class MethodCallsCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
    */
   public function toPSR2() {
     return <<<'PHP'
-namespace Vendor\Package;
-
-use FooClass;
-use BarClass as Bar;
-use OtherVendor\OtherPackage\BazClass;
-
+$foo->bar($arg1);
+Foo::bar($arg2, $arg3);
 PHP;
   }
 
@@ -23,12 +19,8 @@ PHP;
    */
   public function toString() {
     return <<<'PHP'
-namespace Vendor\Package;
-
-use FooClass;
-use BarClass as Bar;
-use OtherVendor\OtherPackage\BazClass;
-
+$foo->bar($arg1);
+Foo::bar($arg2, $arg3);
 PHP;
   }
 }

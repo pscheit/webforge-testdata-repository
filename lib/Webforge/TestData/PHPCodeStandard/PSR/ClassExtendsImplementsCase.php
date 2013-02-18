@@ -2,15 +2,17 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class For extends CodeIndentation {
+class ClassExtendsImplementsCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
    */
   public function toPSR2() {
     return <<<'PHP'
-for ($i = 0; $i < 10; $i++) {
-    echo "for body";
+namespace Some\Vendor;
+
+class ClassName extends ParentClass implements \ArrayAccess, \Countable
+{
 }
 
 PHP;
@@ -21,8 +23,10 @@ PHP;
    */
   public function toString() {
     return <<<'PHP'
-for ($i = 0; $i < 10; $i++) {
-    echo "for body";
+namespace Some\Vendor;
+
+class ClassName extends ParentClass implements \ArrayAccess, \Countable
+{
 }
 
 PHP;

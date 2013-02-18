@@ -2,16 +2,20 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class ClassExtendsImplements extends CodeIndentation {
+class ClassUseNamespaceCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
    */
   public function toPSR2() {
     return <<<'PHP'
-namespace Some\Vendor;
+namespace Vendor\Package;
 
-class ClassName extends ParentClass implements \ArrayAccess, \Countable
+use FooClass;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
+class ClassName
 {
 }
 
@@ -23,9 +27,13 @@ PHP;
    */
   public function toString() {
     return <<<'PHP'
-namespace Some\Vendor;
+namespace Vendor\Package;
 
-class ClassName extends ParentClass implements \ArrayAccess, \Countable
+use FooClass;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
+class ClassName
 {
 }
 

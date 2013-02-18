@@ -2,7 +2,7 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class ClassUseNamespace extends CodeIndentation {
+class AbstractMethodInAbstractClassCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
@@ -11,12 +11,11 @@ class ClassUseNamespace extends CodeIndentation {
     return <<<'PHP'
 namespace Vendor\Package;
 
-use FooClass;
-use BarClass as Bar;
-use OtherVendor\OtherPackage\BazClass;
-
-class ClassName
+abstract class AbstractClassName
 {
+    abstract protected function useIt();
+    
+    abstract public function getLog();
 }
 
 PHP;
@@ -29,12 +28,11 @@ PHP;
     return <<<'PHP'
 namespace Vendor\Package;
 
-use FooClass;
-use BarClass as Bar;
-use OtherVendor\OtherPackage\BazClass;
-
-class ClassName
+abstract class AbstractClassName
 {
+    abstract protected function useIt();
+    
+    abstract public function getLog();
 }
 
 PHP;

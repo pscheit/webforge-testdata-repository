@@ -2,16 +2,19 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class Foreach extends CodeIndentation {
+class NamespaceUseCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
    */
   public function toPSR2() {
     return <<<'PHP'
-foreach ($iterable as $key => $value) {
-    echo "foreach body";
-}
+namespace Vendor\Package;
+
+use FooClass;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
 PHP;
   }
 
@@ -20,9 +23,12 @@ PHP;
    */
   public function toString() {
     return <<<'PHP'
-foreach ($iterable as $key => $value) {
-    echo "foreach body";
-}
+namespace Vendor\Package;
+
+use FooClass;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
 PHP;
   }
 }

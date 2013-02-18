@@ -2,7 +2,7 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class AbstractMethodInAbstractClass extends CodeIndentation {
+class ConstInClassCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
@@ -11,11 +11,9 @@ class AbstractMethodInAbstractClass extends CodeIndentation {
     return <<<'PHP'
 namespace Vendor\Package;
 
-abstract class AbstractClassName
+class ClassName
 {
-    abstract protected function useIt();
-    
-    abstract public function getLog();
+    const SOMETHING = 7;
 }
 
 PHP;
@@ -28,11 +26,9 @@ PHP;
     return <<<'PHP'
 namespace Vendor\Package;
 
-abstract class AbstractClassName
+class ClassName
 {
-    abstract protected function useIt();
-    
-    abstract public function getLog();
+    const SOMETHING = 7;
 }
 
 PHP;

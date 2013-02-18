@@ -40,6 +40,16 @@ class CodeIndentationTest extends \PHPUnit_Framework_TestCase {
   }
   
   /**
+   * @dataProvider provideCasesFQNs
+   */
+  public function testAllClassesCanBeInstantiated($fqn) {
+    $case = new $fqn();
+    
+    $this->assertNotEmpty($case->toPSR2());
+    $this->assertNotEmpty($case->toString());
+  }
+  
+  /**
    * @dataProvider provideCases
    */
   public function testNoCaseContainsTabs($fileName) {
@@ -65,6 +75,16 @@ class CodeIndentationTest extends \PHPUnit_Framework_TestCase {
     }
     
     return $cases;
+  }
+  
+  public static function provideCasesFQNs() {
+    $tests = array();
+    
+    foreach (CodeIndentation::getAllCases() as $fqn) {
+      $tests[] = array($fqn);
+    }
+    
+    return $tests;
   }
 }
 ?>

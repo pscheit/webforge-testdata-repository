@@ -2,15 +2,15 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class ForeachNoKey extends CodeIndentation {
+class ForCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
    */
   public function toPSR2() {
     return <<<'PHP'
-foreach ($iterable as $value) {
-    echo "foreach body";
+for ($i = 0; $i < 10; $i++) {
+    echo "for body";
 }
 
 PHP;
@@ -21,8 +21,8 @@ PHP;
    */
   public function toString() {
     return <<<'PHP'
-foreach ($iterable as $value) {
-    echo "foreach body";
+for ($i = 0; $i < 10; $i++) {
+    echo "for body";
 }
 
 PHP;

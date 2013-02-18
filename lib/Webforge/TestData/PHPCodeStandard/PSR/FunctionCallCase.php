@@ -2,16 +2,14 @@
 
 namespace Webforge\TestData\PHPCodeStandard\PSR;
 
-class SimpleClosureWithUse extends CodeIndentation {
+class FunctionCallCase extends CodeIndentation {
 
   /**
    * @return string correctly indentend in PSR2
    */
   public function toPSR2() {
     return <<<'PHP'
-$closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
-    echo "body";
-};
+bar();
 
 PHP;
   }
@@ -21,9 +19,7 @@ PHP;
    */
   public function toString() {
     return <<<'PHP'
-$closureWithArgsAndVars = function ($arg1, $arg2) use ($var1, $var2) {
-    echo "body";
-};
+bar();
 
 PHP;
   }
