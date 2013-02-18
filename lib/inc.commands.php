@@ -22,7 +22,8 @@ $createCommand('compile:code-standards',
   ),
   function ($input, $output, $command) {
     $namespace = $input->getArgument('code-standard-name');
-    $namespaceDir = Dir::factoryTS(__DIR__)->sub('Webforge/TestData/PHPCodeStandard/'.$namespace.'/');
+    $namespaceDir = Dir::factoryTS(__DIR__)->sub($fullNamespace = 'Webforge/TestData/PHPCodeStandard/'.$namespace.'/');
+    $fullNamespace = str_replace('/', '\\', $fullNamespace);
     $resources = $namespaceDir->sub('resources/');    
     $tplCode = $resources->getFile('CodeIndentationCase.template.php')->getContents();
     
@@ -36,6 +37,7 @@ $createCommand('compile:code-standards',
     
     $output->writeln('writing test cases in '.$resources);
     
+    $list = array();
     foreach ($resources->sub('Cases')->getFiles('php') as $caseFile) {
       $phpCode = mb_substr($caseFile->getContents(), mb_strlen("<?php\n"));
       
@@ -44,15 +46,21 @@ $createCommand('compile:code-standards',
         \Psc\TPL\TPL::miniTemplate(
           $tplCode,
           array(
-            'className'=>$testCase->getName(File::WITHOUT_EXTENSION),
+            'className'=>$className = $testCase->getName(File::WITHOUT_EXTENSION),
             'stringCode'=>$phpCode,
             'phpCode'=>$phpCode
           )
         )
       );
       
+      $list[] = $fullNamespace.$className;
+      
       $output->writeln('  wrote '.$testCase);
     }
+    
+    $indexFile = $resources->getFile('list.php');
+    $output->writeln('writing index-list: '.$indexFile);
+    $indexFile->writeContents('<?php'."\n".'$list = '.var_export($list, true).'; '."\n".'?>');
     
     $output->writeln('<info>finished.</info>');
     

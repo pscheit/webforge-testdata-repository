@@ -16,5 +16,13 @@ abstract class CodeIndentation extends \Webforge\TestData\PHPCodeStandard\CodeIn
    */
   abstract public function toPSR2();
   
+  /**
+   * Returns a list of all Class FQNs of all cases
+   */
+  public static function getAllCases() {
+    require __DIR__.DIRECTORY_SEPARATOR.'resources'.DIRECTORY_SEPARATOR.'list.php';
+    
+    return $list;
+  }
 }
 ?>

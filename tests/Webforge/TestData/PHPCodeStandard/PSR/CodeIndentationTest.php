@@ -4,12 +4,39 @@ namespace Webforge\TestData\PHPCodeStandard\PSR;
 
 use Webforge\Common\System\Dir;
 use Webforge\Common\System\File;
+use Webforge\Common\ArrayUtil AS A;
 
 class CodeIndentationTest extends \PHPUnit_Framework_TestCase {
   
   public function setUp() {
     $this->chainClass = 'Webforge\\TestData\\PHPCodeStandard\\PSR\\CodeIndentation';
     parent::setUp();
+    
+    
+  }
+  
+  public function testAllCaseFilesClasses_AreInGetAllCasesOutput() {
+    $classNames = CodeIndentation::getAllCases();
+    
+    $expectedClassNames = array();
+    foreach (
+      $GLOBALS['env']['root']
+        ->sub('lib/Webforge/TestData/PHPCodeStandard/PSR/')
+          ->getFiles('php', array('CodeIndentation.php'), FALSE)
+      as
+      $classFile
+    ) {
+      $expectedClassNames[] = __NAMESPACE__.'\\'.$classFile->getName(File::WITHOUT_EXTENSION);
+    }
+    
+    $this->assertEquals(
+      $expectedClassNames,
+      $classNames,
+      '',
+      0,
+      2,
+      TRUE
+    );
   }
   
   /**
@@ -33,7 +60,7 @@ class CodeIndentationTest extends \PHPUnit_Framework_TestCase {
   public static function provideCases() {
     $cases = array();
     
-    foreach ($GLOBALS['env']['root']->sub('lib/Webforge/TestData/PHPCodeStandard/PSR/')->getFiles('php') as $file) {
+    foreach ($GLOBALS['env']['root']->sub('lib/Webforge/TestData/PHPCodeStandard/PSR/resources/')->getFiles('php') as $file) {
       $cases[] = array((string) $file);
     }
     
