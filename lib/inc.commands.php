@@ -28,7 +28,7 @@ $createCommand('compile:code-standards',
     
     $convertName = function (File $caseFile) {
       return ucfirst(
-        Preg::replace_callback($caseFile->getName(), '/[a-z]\-/', function ($match) {
+        Preg::replace_callback($caseFile->getName(), '/\-([a-z])/', function ($match) {
           return mb_strtoupper($match[1]);
         })
       );
@@ -37,17 +37,17 @@ $createCommand('compile:code-standards',
     $output->writeln('writing test cases in '.$resources);
     
     foreach ($resources->sub('Cases')->getFiles('php') as $caseFile) {
-      $phpCode = mb_substr($caseInput->getContents(), mb_strlen('<?php'));
+      $phpCode = mb_substr($caseFile->getContents(), mb_strlen("<?php\n"));
       
-      $testCase = $namespaceDir->getFile($testCaseName = $convertName($caseFile));
+      $testCase = $namespaceDir->getFile($convertName($caseFile));
       $testCase->writeContents(
-        str_replace(
+        \Psc\TPL\TPL::miniTemplate(
+          $tplCode,
           array(
-            '%className%'=>$testCaseName,
-            '%stringCode%'=>$phpCode,
-            '%phpCode%'=>$phpCode
-          ),
-          $tplCode
+            'className'=>$testCase->getName(File::WITHOUT_EXTENSION),
+            'stringCode'=>$phpCode,
+            'phpCode'=>$phpCode
+          )
         )
       );
       

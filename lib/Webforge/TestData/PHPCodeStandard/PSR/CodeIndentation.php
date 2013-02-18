@@ -7,7 +7,7 @@ namespace Webforge\TestData\PHPCodeStandard\PSR;
  *
  * https://github.com/php-fig/fig-standards
  *
- * the testcases are defined in resources (for better maintability). They can be compiled with the command line interface
+ * the testcases are defined in resources (for better maintainability). They can be compiled with the command line interface
  */
 abstract class CodeIndentation extends \Webforge\TestData\PHPCodeStandard\CodeIndentation {
 

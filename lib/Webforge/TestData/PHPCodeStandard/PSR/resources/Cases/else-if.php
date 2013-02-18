@@ -1,6 +1,6 @@
 <?php
 if ($expr1) {
     echo 'indentation is 4';
-} else {
+} elseif ($expr2) {
     echo 'indentation is 4';
 }
