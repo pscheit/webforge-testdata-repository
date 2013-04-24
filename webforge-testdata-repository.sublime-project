@@ -1,0 +1,9 @@
+{
+  "folders":
+  [
+    {
+      "path": "D:\\www\\webforge-testdata-repository",
+      "folder_exclude_patterns": ["vendor", "build", ".komodotools"]
+    }
+  ]
+}
