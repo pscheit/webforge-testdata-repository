@@ -196,22 +196,21 @@ STRING;
       <li><a>Dienstleistungen</a></li>
       <li><a>Lösungen</a>
         <ul>
-          <li>HMS</li>
-          <li>HTS</li>
-          <li>INT
+          <li><a>HMS</a></li>
+          <li><a>HTS</a></li>
+          <li><a>INT</a>
             <ul>
-              <li>container</li>
-              <li>model</li>
-              <li>win</li>
+              <li><a>container</a></li>
+              <li><a>model</a></li>
+              <li><a>win</a></li>
             </ul>
           </li>
         </ul>
       </li>
+      <li><a>Kunden</a></li>
     </ul>
   </li>
-  <li><a>Kunden</a></li>
 </ul>
-
 HTML;
   }
 }

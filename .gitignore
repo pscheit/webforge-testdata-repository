@@ -2,3 +2,5 @@
 /testdata.komodoproject
 /vendor
 /composer.lock
+
+/*.sublime-workspace
