@@ -165,6 +165,86 @@ class Hgdrn extends NestedSetExample {
       ),
     );
   }
+
+  public function toStructureArray() {
+    return Array(
+      array(
+        'title' => 'Startseite',
+        'parent' => NULL,
+        'depth' => 0,
+        'children' => Array(
+          array(
+            'title' => 'Unternehmen',
+            'parent' => 'Startseite',
+            'depth' => 1,
+            'children' => Array()
+          ),
+          array(
+            'title' => 'Produkte',
+            'parent' => 'Startseite',
+            'depth' => 1,
+            'children' => Array()
+          ),
+          array(
+            'title' => 'Dienstleistungen',
+            'parent' => 'Startseite',
+            'depth' => 1,
+            'children' => Array()
+          ),
+          array(
+            'title' => 'Lösungen',
+            'parent' => 'Startseite',
+            'depth' => 1,
+            'children' => Array(
+              array(
+                'title' => 'HMS',
+                'parent' => 'Lösungen',
+                'depth' => 2,
+                'children' => Array()
+              ),
+              array(
+                'title' => 'HTS',
+                'parent' => 'Lösungen',
+                'depth' => 2,
+                'children' => Array()
+              ),
+              array(
+                'title' => 'INT',
+                'parent' => 'Lösungen',
+                'depth' => 2,
+                'children' => Array(
+                  array(
+                    'title' => 'container',
+                    'parent' => 'INT',
+                    'depth' => 3,
+                    'children' => Array()
+                  ),
+                  array(
+                    'title' => 'model',
+                    'parent' => 'INT',
+                    'depth' => 3,
+                    'children' => Array()
+                  ),
+                  array(
+                    'title' => 'win',
+                    'parent' => 'INT',
+                    'depth' => 3,
+                    'children' => Array()
+                  )
+                )
+              )
+            )
+          ),
+          array(
+            'title' => 'Kunden',
+            'parent' => 'Startseite',
+            'depth' => 1,
+            'children' => Array()
+          )
+        )
+      )
+    );
+  }
   
   public function toString() {
     return <<<'STRING'
