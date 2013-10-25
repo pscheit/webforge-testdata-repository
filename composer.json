@@ -15,7 +15,8 @@
     "psr-0": {"Webforge\\TestData": ["lib/", "tests/"]}
   },
   "require-dev": {
-    "pscheit/psc-cms": "1.4.*@dev"
+    "pscheit/psc-cms": "1.4.*@dev",
+    "satooshi/php-coveralls": "dev-master"
   },
   "minimum-stability": "dev"
 }

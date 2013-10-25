@@ -8,8 +8,11 @@ branches:
 
 before_install:
   - COMPOSER_ROOT_VERSION=dev-master composer install --dev --prefer-source --no-interaction
-  
-script: phpunit
+
+script: phpunit --coverage-clover build/logs/clover.xml
+
+after_script:
+  - php vendor/bin/coveralls -v
 
 notifications:
   irc: "irc.freenode.org#webforge-testdata"
